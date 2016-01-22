@@ -1,0 +1,27 @@
+<apex:page standardController="position__c" recordSetVar="positions" sidebar="false" showHeader="false">
+    <apex:pageBlock >
+        <h1>Welcome to the Universal Containers Careers Home Page!</h1>
+        <p>Universal Containers is an industry leader, and to stay ahead of the pack, we need to grow! We are currently seeking bright and talented professionals to join our winning team.  Browse the current openings below, and send in your resume via email to apply today.</p>
+        <br />
+        <apex:pageBlockTable value="{!positions}" var="position">
+            <apex:column value="{!position.name}" rendered="{!IF(position.status__c == 'Open - Approved', true, false)}"/>
+            <apex:column value="{!position.location__c}" rendered="{!IF(position.status__c == 'Open - Approved', true, false)}"/>
+            <apex:column value="{!position.Job_Description__c}" rendered="{!IF(position.status__c == 'Open - Approved', true, false)}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    
+<script type='text/javascript' src='https://c.la2c1.salesforceliveagent.com/content/g/js/35.0/deployment.js'></script>
+<script type='text/javascript'>
+liveagent.init('https://d.la2c1.salesforceliveagent.com/chat', '572i0000000Row5', '00Di0000000dE3q');
+</script>
+
+<a id="liveagent_button_online_573i0000000RsFz" href="javascript://Chat" style="display: inline;" onclick="liveagent.startChat('573i0000000RsFz')">something online</a><div id="liveagent_button_offline_573i0000000RsFz" style="display: inline;">something offline</div><script type="text/javascript">
+if (!window._laq) { window._laq = []; }
+window._laq.push(function(){liveagent.showWhenOnline('573i0000000RsFz', document.getElementById('liveagent_button_online_573i0000000RsFz'));
+liveagent.showWhenOffline('573i0000000RsFz', document.getElementById('liveagent_button_offline_573i0000000RsFz'));
+});</script>
+    
+    
+    
+    
+</apex:page>

@@ -1,0 +1,41 @@
+<apex:page standardController="account" sidebar="false" showHeader="false" standardStylesheets="false">
+ 
+<!-- <style> -->
+<!-- body {font-family: Arial Unicode MS;} -->
+<!-- h1 {color:red;} -->
+<!-- </style> -->
+ 
+<!-- <apex:stylesheet value="http://developer.force.com/workbooks/vfdemo.css"/> -->
+
+ <apex:stylesheet value="{!urlfor($Resource.style,'styles.css')}"/>
+ <h1> header </h1>
+ <p> para </p>
+ <br/>
+ <apex:dataTable value="{!account.contacts}" var="item">
+  <apex:column value="{!item.name}"/>
+  <apex:column value="{!item.phone}"/>
+ </apex:dataTable>
+ <br/>
+ 
+ <apex:dataList value="{!account.contacts}" var="item">
+   <apex:outputText value="{!item.name}"/>
+ </apex:dataList>
+ 
+ <br/>
+ 
+ <ul>
+ <apex:repeat value="{!account.contacts}" var="item">
+  <li> <apex:outputText value="{!item.name}"/>
+      <ui><li> <apex:outputText value="{!item.phone}"/> </li> </ui>
+  </li>
+ </apex:repeat>
+ 
+ 
+ </ul>
+ 
+ 
+ 
+ 
+ 
+ 
+</apex:page>

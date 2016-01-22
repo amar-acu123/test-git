@@ -1,0 +1,12 @@
+<apex:page sidebar="false" showHeader="false" >
+
+ <p> test before </p>
+
+  <apex:include pagename="mainpage"/>
+
+ <p> test after</p>
+
+
+
+
+</apex:page>

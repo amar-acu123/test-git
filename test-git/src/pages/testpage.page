@@ -1,0 +1,26 @@
+<apex:page sidebar="true" showHeader="true" >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1> Name = {!$User.FirstName&' '&$User.LastName} </h1>
+    <br /> Date = {!Today()}
+    <br /> next week = {!today()+7}
+    <br /> year = {!year(today())}
+    <br /> mo= {! month(today())}
+    <br /> {!sqrt(49)}
+    <br /> {!contains('force.com', 'force')}
+    <br /> {! if(contains('force.com','for'),'yes','no') }
+    
+    
+   <apex:pageBlock title="a block title">
+ 
+   <apex:pageBlockSection title="a section title">
+    some text
+   </apex:pageBlockSection>
+ 
+   <apex:pageBlockSection title="second block">
+    more text
+   </apex:pageBlockSection>
+ 
+  </apex:pageBlock>
+
+
+</apex:page>

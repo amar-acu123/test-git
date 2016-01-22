@@ -1,0 +1,8 @@
+<apex:page sidebar="false" showHeader="false" >
+    <apex:composition template="basictemplate">
+     <apex:define name="body">
+       <p> demo, text inserted, and banner made </p>
+     </apex:define>
+    </apex:composition>
+
+</apex:page>

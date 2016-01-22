@@ -1,0 +1,50 @@
+<apex:page standardController="account" showHeader="false" standardStylesheets="false" >
+ 
+    <apex:pageMessages />
+ 
+    
+    <apex:form >
+        
+  
+      <apex:pageBlock >
+       <apex:pageblockSection >
+
+    
+       
+       </apex:pageblockSection>
+      </apex:pageBlock>
+
+       <apex:inputField value="{!account.name}"/>
+        <apex:inputField value="{!account.industry}"/>
+        <apex:commandButton action="{!save}" value="save" />
+
+    </apex:form>
+
+
+    <apex:pageBlock title="A Block Title">
+        <apex:pageBlockSection title="A Section Title">
+            I'm three components deep!
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="A New Section">
+            This is another section.
+            {!$User.FirstName}
+             <apex:outputField value="{!account.Name}"/>
+             <apex:outputLink value="{!urlfor($Action.Account.New)}" style="color:red;">asdf</apex:outputLink>
+
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+ 
+     <h1> asdfasdfasdf </h1>
+   
+<style>
+    body {font-family: Arial Unicode MS;}
+    h1 {color:red;}
+</style>    
+
+￼￼￼￼￼￼   <apex:dataTable value="{!account.contacts}" var="c">
+    <apex:column headerValue="asdf">
+       <p> {!c.name} </p>
+    </apex:column>
+   </apex:dataTable>
+
+</apex:page>

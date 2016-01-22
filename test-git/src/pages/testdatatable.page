@@ -1,0 +1,24 @@
+<apex:page controller="dataTableCon" id="thePage" sidebar="false">
+
+    <apex:dataTable value="{!accounts}" var="account" id="theTable" rowClasses="odd,even" styleClass="tableClass" columns="3">
+
+        <apex:column >
+            <apex:outputText value="{!account.name}" rendered="{! if((account.name!='Dickenson plc'), true, false)}"/>
+        </apex:column>
+
+        <apex:column >
+            <apex:outputText style="align-right" value="{!account.NumberOfEmployees}"/>
+       </apex:column>
+
+        <apex:column rendered="{! if((account.name!='Dickenson plc'), true, false)}" >
+            <a href="http://www.google.com">{!account.AnnualRevenue}</a>
+       </apex:column>
+
+    </apex:dataTable>
+          
+    
+    <apex:form >
+          <apex:commandLink action="{!ValidateApplication}" value="Submit Application" reRender="thePage"/>
+   </apex:form>
+
+</apex:page>

@@ -1,0 +1,8 @@
+<apex:page standardController="lead" >
+
+<flow:interview name="save_record"/>
+
+
+
+
+</apex:page>

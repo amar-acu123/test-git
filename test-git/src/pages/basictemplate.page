@@ -1,0 +1,7 @@
+<apex:page >
+
+ <apex:stylesheet value="http://developer.force.com/workbooks/vfdemo.css"/>
+ <h1> my fancy site </h1>
+ <apex:insert name="body"/>
+
+</apex:page>

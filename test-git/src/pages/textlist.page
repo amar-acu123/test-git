@@ -1,0 +1,27 @@
+<apex:page standardController="account">
+
+
+
+<apex:form >
+
+<apex:pageBlock title="Edit Account for {!$User.FirstName}">
+
+
+<apex:pageBlockButtons >
+
+<apex:commandButton value="Save" action="{!save}"/>
+
+</apex:pageBlockButtons>
+
+<apex:pageBlockSection >
+
+<apex:inputField value="{!account.name}"/>
+
+<apex:inputField value="{!account.industry}"/>
+
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+
+</apex:form>
+</apex:page>

@@ -1,0 +1,30 @@
+<apex:page standardController="Account" >
+
+<p><b> i am on tutorial 6 </b></p>
+ <apex:outputLink value="https://www.google.com/"> google </apex:outputLink>
+  <br/>
+ <apex:outputLink value="{!$Page.testpage}"> test page </apex:outputLink>
+  <br/>
+ <apex:outputLink value="{!urlfor($Action.Account.New)}"> new account </apex:outputLink>
+
+ <apex:detail relatedList="false" />
+ <apex:relatedList list="cases"/>
+ 
+
+ <apex:pageBlock title="custom output">
+   <apex:pageBlockSection title="custom section title">
+   <apex:outputField value="{!account.name}"/>
+   <apex:outputField value="{!account.owner.name}"/>
+   </apex:pageBlockSection>
+ </apex:pageBlock>
+
+ <apex:pageBlock title="my account contacts">
+  <apex:pageBlockTable value="{!account.contacts}" var="item">
+      <apex:column value="{!item.name}"/>
+      <apex:column value="{!item.email}"/>
+  </apex:pageBlockTable>
+ </apex:pageBlock>
+
+
+
+</apex:page>
